@@ -12,5 +12,11 @@ fun countVowels (phrase: String): Int {
 }
 
 fun countConsonants (phrase: String): Int {
-    return 0
+    val CONSONANTS = "bcdfghjklmnpqrstvwxyz"
+    var totalConsonants = 0
+
+    for (letter in phrase) {
+        if(letter.toLowerCase() in CONSONANTS) totalConsonants++
+    }
+    return totalConsonants
 }
